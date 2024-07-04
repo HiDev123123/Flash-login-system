@@ -1,0 +1,88 @@
+{% extends 'base3.html' %}
+
+{% block title %}Home{% endblock %}
+
+{% block content %}
+
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Admin Dashboard</title>
+</head>
+
+<body>
+    <h1>Welcome to the Dashboard</h1>
+    <p>Logged in as {{ username }}</p>
+
+</body>
+
+</html>
+
+<div class="container-fluid">
+
+    <div class="row justify-content-center">
+
+        <div class="card text-center m-3" style="width: 20rem;">
+            <div class="card-head">
+                <center><img src="{{ url_for('static', filename='image/login.jpg') }}" class="card-img-top"
+                        style="height: 10vh; width: 10vh;" alt="..."></center>
+            </div>
+            <div class="card-body">
+                <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#student_login">
+                    Student Login
+                </button>
+            </div>
+        </div>
+
+        <div class="card text-center m-3" style="width: 20rem;">
+            <div class="card-head">
+                <center><img src="{{ url_for('static', filename='image/login.jpg') }}" class="card-img-top"
+                        style="height: 10vh; width: 10vh;" alt="..."></center>
+            </div>
+            <div class="card-body">
+                <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#Admin_login">
+                    Admin Login
+                </button>
+            </div>
+        </div>
+
+        <div class="card text-center m-3" style="width: 20rem;">
+            <div class="card-head">
+                <center><img src="{{ url_for('static', filename='image/login.jpg') }}" class="card-img-top"
+                        style="height: 10vh; width: 10vh;"></center>
+            </div>
+            <div class="card-body">
+                <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#register_login">
+                    Register Student
+                </button>
+            </div>
+        </div>
+        
+        <div class="card text-center m-3" style="width: 20rem;">
+            <div class="card-head">
+                <center><img src="{{ url_for('static', filename='image/login.jpg') }}" class="card-img-top"
+                        style="height: 10vh; width: 10vh;"></center>
+            </div>
+            <div class="card-body">
+                <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#register_login">
+                    Register Student
+                </button>
+            </div>
+        </div>
+
+    </div>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+{% endblock %}

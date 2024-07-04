@@ -1,0 +1,151 @@
+{% extends 'base1.html' %}
+
+{% block title %}Home{% endblock %}
+
+{% block content %}
+<!-- index contant begins here -->
+<marquee behavior="" direction="left" class="border-bottom mb-2">This is a Library Management System. It is under
+    development!!</marquee>
+
+<div class="container-fluid ">
+
+    <div class="row justify-content-center">
+
+        <div class="col-sm-6">
+
+            <div class="row justify-content-center">
+
+                <div class=" text-center m-3">
+                    <div class="card text-center p-3 ">
+                        <h3>Notice</h3>
+                        <ul>
+                            <li>This is my notice and don't disturb me ok you donkey</li>
+                            <li>This is my notice and don't disturb me ok you donkey</li>
+                            <li>This is my notice and don't disturb me ok you donkey</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="  text-center m-3">
+                    <div class="card text-center p-3 ">
+                        <h3>Notice</h3>
+                        <ul>
+                            <li>This is my notice and don't disturb me ok you donkey</li>
+                            <li>This is my notice and don't disturb me ok you donkey</li>
+                            <li>This is my notice and don't disturb me ok you donkey</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-sm-6">
+
+            <div class="row justify-content-center">
+
+                <div class="card text-center m-3" style="width: 20rem;">
+                    <div class="card-head">
+                        <center><img src="{{ url_for('static', filename='image/login.jpg') }}" class="card-img-top"
+                                style="height: 10vh; width: 10vh;" alt="..."></center>
+                    </div>
+                    <div class="card-body">
+                        <button type="button" class="btn btn-primary" data-bs-toggle="modal"
+                            data-bs-target="#student_login">
+                            Student Login
+                        </button>
+                    </div>
+                </div>
+
+                <div class="card text-center m-3" style="width: 20rem;">
+                    <div class="card-head">
+                        <center><img src="{{ url_for('static', filename='image/login.jpg') }}" class="card-img-top"
+                                style="height: 10vh; width: 10vh;" alt="..."></center>
+                    </div>
+                    <div class="card-body">
+                        <button type="button" class="btn btn-primary" data-bs-toggle="modal"
+                            data-bs-target="#Admin_login">
+                            Admin Login
+                        </button>
+                    </div>
+                </div>
+
+                
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+<!-- login modem -->
+
+<!-- Button trigger modal -->
+
+
+<!-- Modal -->
+<!-- Student Login -->
+<div class="modal fade" id="student_login" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h1 class="modal-title fs-5 " id="exampleModalLabel">Student Login</h1>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <form method="post" action="{{ url_for('student_login') }}" class="row  p-4 needs-validation" validate>
+                    <div class="">
+                        <label for="class" class="form-label">Phone</label>
+                        <input required type="number" class="form-control" id="phone" name="phone">
+                    </div>
+                    <div class="">
+                        <label for="roll" class="form-label">Password</label>
+                        <input required type="text" class="form-control" id="password" name="password">
+                    </div>
+                    <div class="mt-3">
+                        <button type="submit" class="btn btn-primary">Sign in</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Admin Login -->
+<div class="modal fade" id="Admin_login" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h1 class="modal-title fs-5 " id="exampleModalLabel">Admin Login</h1>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                
+                <form method="post" action="/admin_login" class="row  p-4 needs-validation" validate>
+                    <div class="">
+                        <label for="class" class="form-label">Phone</label>
+                        <input required type="number" class="form-control" id="phone" name="phone">
+                    </div>
+                    <div class="">
+                        <label for="roll" class="form-label">Password</label>
+                        <input required type="text" class="form-control" id="password" name="password">
+                    </div>
+                    <div class="mt-3">
+                        <button type="submit" class="btn btn-primary">Sign in</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+
+{% endblock %}
